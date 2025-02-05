@@ -1,0 +1,39 @@
+﻿@model Luftborn.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10">
+            <div class="card shadow-lg border-0 rounded-4" style="background-color: #FFFFFA;">
+                <div class="card-header text-white text-center" style="background-color: #247B7B;">
+                    <h2 class="mb-0">Product Details</h2>
+                </div>
+                <div class="card-body p-4">
+                    <dl class="row">
+                        <dt class="col-sm-4 fw-bold text-black">Name:</dt>
+                        <dd class="col-sm-8 text-dark">@Model.Name</dd>
+
+                        <dt class="col-sm-4 fw-bold text-black">Price:</dt>
+                        <dd class="col-sm-8 text-dark">$@Model.Price.ToString("N2")</dd>
+
+                        <dt class="col-sm-4 fw-bold text-black">Category:</dt>
+                        <dd class="col-sm-8">
+                            <span class="badge" style="background-color: #44A1A0; color: white;">@Model.Category.Name</span>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="card-footer border-top-0 text-center" style="background-color: #FFFFFA;">
+                    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn text-white" style="background-color: #0D5C63;">
+                        <i class="bi bi-pencil"></i> Edit
+                    </a>
+                    <a asp-action="Index" class="btn text-white" style="background-color: #78CDD7;">
+                        <i class="bi bi-arrow-left"></i> Back to List
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

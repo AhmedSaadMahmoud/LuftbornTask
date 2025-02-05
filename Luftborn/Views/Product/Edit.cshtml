@@ -1,0 +1,56 @@
+﻿@model Luftborn.Models.Product
+
+@{
+    ViewData["Title"] = "Edit Product";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10">
+            <div class="card shadow-lg border-0 rounded-4" style="background-color: #FFFFFA;">
+                <div class="card-header text-white text-center" style="background-color: #247B7B;">
+                    <h2 class="mb-0">Edit Product</h2>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label fw-bold" style="color: #0D5C63;"></label>
+                            <input asp-for="Name" class="form-control" placeholder="Enter product name" style="border-color: #44A1A0;" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Price" class="form-label fw-bold" style="color: #0D5C63;"></label>
+                            <input asp-for="Price" class="form-control" placeholder="Enter price" style="border-color: #44A1A0;" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Category" class="form-label fw-bold" style="color: #0D5C63;"></label>
+                            <select asp-for="CategoryId" class="form-select" asp-items="ViewBag.CategoryId" style="border-color: #44A1A0;">
+                                <option value="">Select a category</option>
+                            </select>
+                            <span asp-validation-for="CategoryId" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-lg text-white" style="background-color: #247B7B;">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a asp-action="Index" class="btn btn-outline-secondary" style="border-color: #0D5C63; color: #0D5C63;">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
