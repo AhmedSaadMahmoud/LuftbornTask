@@ -12,7 +12,7 @@
                     <h2 class="mb-0">Create New Product</h2>
                 </div>
                 <div class="card-body p-4">
-                    <form asp-action="Create">
+                    <form asp-action="Create" enctype="multipart/form-data">
                         <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
 
                         <div class="mb-3">
@@ -34,14 +34,20 @@
                             </select>
                         </div>
 
+                        <!-- Image Upload Field -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold" style="color: #0D5C63;">Product Image</label>
+                            <input type="file" name="imageFile" class="form-control" style="border-color: #44A1A0;" accept="image/*" />
+                        </div>
+
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-lg text-white " style="background-color: #247B7B;">Create Product</button>
+                            <button type="submit" class="btn btn-lg text-white" style="background-color: #247B7B;">Create Product</button>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="text-center mt-4">
-                <a asp-action="Index" class="btn btn-outline-secondary" >Back to List</a>
+                <a asp-action="Index" class="btn btn-outline-secondary">Back to List</a>
             </div>
         </div>
     </div>

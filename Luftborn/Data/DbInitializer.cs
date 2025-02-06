@@ -6,8 +6,8 @@ public static class DbInitializer
     {
 
         context.Database.EnsureCreated();
-        if (context.Categories.Any()) 
-        { return; } 
+        if (context.Categories.Any())
+        { return; }
 
         var categories = new Category[]
         {

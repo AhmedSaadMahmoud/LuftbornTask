@@ -1,30 +1,26 @@
 ﻿@{
     ViewData["Title"] = "Contact";
 }
-<h1>@ViewData["Title"]</h1>
 
-<div class="container mt-5">
+<div class="container py-5">
     <div class="text-center mb-4">
-        <h2>Contact Me</h2>
+        <h2 class="fw-bold" style="color: #0D5C63;">Contact Me</h2>
         <p class="text-muted">I'd love to hear from you! Reach out through any of the channels below.</p>
     </div>
-
-    <!-- About Me Section -->
-    <div class="card shadow-sm mb-5">
+    <div class="card shadow-lg border-0 rounded-4 mb-5">
         <div class="card-body text-center">
-            <h3 class="card-title">About Me</h3>
+            <h3 class="card-title text-dark">About Me</h3>
             <p class="card-text">
                 I'm a software engineer passionate about building scalable and maintainable applications.
-                I specialize in .NET, Entity Framework Core, and MS SQL Server, Web API
-                creating high-performance web applications with a focus on clean architecture and best practices.
+                I specialize in <strong>.NET Core</strong>, <strong>Entity Framework Core</strong>, and <strong>MS SQL Server</strong>.
+                My focus is on developing high-performance web applications using <strong>clean architecture</strong> and best practices.
             </p>
         </div>
     </div>
 
     <div class="row g-4">
-        <!-- Phone -->
         <div class="col-md-3 col-sm-6">
-            <div class="card shadow-sm text-center h-100">
+            <div class="card shadow-lg text-center h-100 border-0">
                 <div class="card-body">
                     <i class="bi bi-telephone-fill fs-1 text-primary"></i>
                     <h5 class="card-title mt-3">Phone</h5>
@@ -32,48 +28,48 @@
                 </div>
             </div>
         </div>
-        <!-- Email -->
         <div class="col-md-3 col-sm-6">
-            <div class="card shadow-sm text-center h-100">
+            <div class="card shadow-lg text-center h-100 border-0">
                 <div class="card-body">
                     <i class="bi bi-envelope-fill fs-1 text-danger"></i>
                     <h5 class="card-title mt-3">Email</h5>
-                    <p class="card-text">ahmed.saad192168@gmail.com</p>
+                    <p class="card-text">
+                        <a href="mailto:ahmed.saad192168@gmail.com" class="text-decoration-none">ahmed.saad192168@gmail.com</a>
+                    </p>
                 </div>
             </div>
         </div>
-        <!-- LinkedIn -->
         <div class="col-md-3 col-sm-6">
-            <div class="card shadow-sm text-center h-100">
+            <div class="card shadow-lg text-center h-100 border-0">
                 <div class="card-body">
                     <i class="bi bi-linkedin fs-1 text-info"></i>
                     <h5 class="card-title mt-3">LinkedIn</h5>
-                    <a href="https://www.linkedin.com/in/ahmed-saad-bb03b2153" target="_blank" class="stretched-link text-decoration-none">View Profile</a>
+                    <a href="https://www.linkedin.com/in/ahmed-saad-bb03b2153" target="_blank" class="stretched-link text-decoration-none fw-bold">View Profile</a>
                 </div>
             </div>
         </div>
-        <!-- GitHub -->
         <div class="col-md-3 col-sm-6">
-            <div class="card shadow-sm text-center h-100">
+            <div class="card shadow-lg text-center h-100 border-0">
                 <div class="card-body">
                     <i class="bi bi-github fs-1 text-dark"></i>
                     <h5 class="card-title mt-3">GitHub</h5>
-                    <a href="https://github.com/AhmedSaadMahmoud" target="_blank" class="stretched-link text-decoration-none">View Github</a>
+                    <a href="https://github.com/AhmedSaadMahmoud" target="_blank" class="stretched-link text-decoration-none fw-bold">View GitHub</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Technologies Used -->
-    <div class="card shadow-sm mt-5">
+
+    <div class="card shadow-lg border-0 rounded-4 mt-5">
         <div class="card-body">
-            <h3 class="card-title text-center">Technologies Used</h3>
+            <h3 class="card-title text-center text-dark">Technologies Used for This Project</h3>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><strong>.NET Core MVC</strong> - Backend framework for web applications</li>
                 <li class="list-group-item"><strong>Razor Pages</strong> (HTML5, CSS, JS) - UI rendering and client-side interactions</li>
                 <li class="list-group-item"><strong>Entity Framework Core</strong> - ORM for database interaction</li>
                 <li class="list-group-item"><strong>LINQ</strong> - Querying and manipulating collections efficiently</li>
                 <li class="list-group-item"><strong>MS SQL Server</strong> - Database management system</li>
+                <li class="list-group-item"><strong>AZURE Active Directory</strong> - As a ADFS For SSO</li>
             </ul>
         </div>
     </div>

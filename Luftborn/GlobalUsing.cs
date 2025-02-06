@@ -6,3 +6,8 @@ global using Luftborn.Data;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.AspNetCore.Mvc.Rendering;
 global using Luftborn.Repositories.Categories;
+global using Microsoft.AspNetCore.Authorization;
+global using System.Diagnostics;
+global using Microsoft.AspNetCore.Authentication.Cookies;
+global using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+global using Microsoft.AspNetCore.Authentication;
